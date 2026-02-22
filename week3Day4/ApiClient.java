@@ -1,0 +1,23 @@
+package week3Day4;
+
+public class ApiClient {
+
+	public void sendRequest(String endpoint) {
+		System.out.println("sendRequest(String endpoint) method called");
+		System.out.println("Endpoint: " + endpoint);
+	}
+
+	public void sendRequest(String endpoint, String requestBody, boolean requestStatus) {
+		System.out.println("sendRequest(String endpoint, String requestBody, boolean requestStatus) method called");
+		System.out.println("Endpoint: " + endpoint);
+		System.out.println("Request Body: " + requestBody);
+		System.out.println("Request Status: " + requestStatus);
+	}
+
+	public static void main(String[] args) {
+		ApiClient apiClientObj = new ApiClient();
+		apiClientObj.sendRequest("https://google.com");
+		apiClientObj.sendRequest("https://google.com", "{'searchText':'testing'}", true);
+	}
+
+}
